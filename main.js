@@ -94,9 +94,10 @@ function createPropSymbols(data){
     };
 
 }; 
+//var slider = document.getElementById("Air Fields");
 //Add sliderbar here; Go to ArcGIS Pro
         //Example 2.2 line 8
-      onAdd: function () {
+      /*onAdd: function () {
             // create the control container div with a particular class name
             var container = L.DomUtil.create('div', 'sequence-control-container');
 
@@ -104,7 +105,7 @@ function createPropSymbols(data){
             container.insertAdjacentHTML('beforeend', '<input class="range-slider" type="range">')
 
             return container;
-        }      
+        }*/        
         
     //CODE FROM updatePropSymbols() FUNCTION
     //build new popup content string
