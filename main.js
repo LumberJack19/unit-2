@@ -41,7 +41,7 @@ function onEachFeature(feature, layer) {
 // This function retrieves the data and adds it to the map
 function getData(){
     // Fetching the GeoJSON data from the specified URL
-    fetch("data/Airport_Reference_Points_table.geojson")
+    fetch("data/cy21allenplane.geojson")
         .then(function(response){
             // Once the data is fetched, we parse it as JSON
             return response.json();
@@ -68,6 +68,77 @@ function getData(){
         });
 };
 
+
+//Step 2: Import GeoJSON data
+function getData2(){
+    //load the data
+    fetch("data/MegaCities.geojson")
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(json){
+            //call function to create proportional symbols
+            createPropSymbols(json);
+        })
+};
+//Step 3: Add circle markers for point features to the map
+function createPropSymbols(data){
+    //create marker options
+    var geojsonMarkerOptions = {
+        radius: 8,
+        fillColor: "#ff7800",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+}; 
+//var slider = document.getElementById("Air Fields");
+//Add sliderbar here; Go to ArcGIS Pro
+        //Example 2.2 line 8
+      /*onAdd: function () {
+            // create the control container div with a particular class name
+            var container = L.DomUtil.create('div', 'sequence-control-container');
+
+            //create range input element (slider)
+            container.insertAdjacentHTML('beforeend', '<input class="range-slider" type="range">')
+
+            return container;
+        }*/        
+        
+    //CODE FROM updatePropSymbols() FUNCTION
+    //build new popup content string
+  /* var popupContent = "<p><b>City:</b> " + props.City + "</p>";
+
+    //add formatted attribute to panel content string
+    var year = attribute.split("_")[1];
+    popupContent += "<p><b>Population in " + year + ":</b> " + props[attribute] + " million</p>";
+
+    //update popup with new content    
+    popup = layer.getPopup();    
+    popup.setContent(popupContent).update();*/
+
+//function to convert markers to circle markers
+/*function pointToLayer(feature, latlng){
+    //Determine which attribute to visualize with proportional symbols
+    var attribute = "CY 21 Enplanements";
+
+    //create marker options
+    var options = {
+        fillColor: "#ff7800",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+    //create a Leaflet GeoJSON layer and add it to the map
+    L.geoJson(data, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        }
+    }).addTo(map);*/
+    
 // Adding an event listener that calls 'createMap' once the content of the document is fully loaded.
 // This ensures that the map is created as soon as the webpage is loaded.
 document.addEventListener('DOMContentLoaded',createMap)

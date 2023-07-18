@@ -1,0 +1,47 @@
+/*Add CSS styles here*/
+background{
+    color: #00ffc8;
+}
+h1 {
+    color: #004d4d;
+    font-size: 50px;	
+    }
+h2 {
+    color: #00ff00";
+    font-size: 50px;	
+    }
+/*For map and slide container*/
+#map {
+    height: 400px;
+    width: 100%;
+    display: inline-block;
+}
+...
+
+.sequence-control-container {  
+    width: 350px;  
+    height: 30px;  
+    background-color: rgba(255,255,255,0.8);  
+    padding: 10px;  
+    line-height: 45px;  
+    text-align: center;  
+    border: solid gray 1px;  
+}  
+
+.range-slider {  
+    width: 250px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}  
+
+.step {  
+    width: 40px;  
+}  
+
+.step img {  
+    width: 100%;  
+    height: auto;  
+} 
