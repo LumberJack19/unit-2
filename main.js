@@ -68,19 +68,22 @@ function getData(){
         });
 };
 
+//commenting out unused code here 
 
-//Step 2: Import GeoJSON data
-function getData2(){
-    //load the data
-    fetch("data/MegaCities.geojson")
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(json){
-            //call function to create proportional symbols
-            createPropSymbols(json);
-        })
-};
+// //Step 2: Import GeoJSON data
+// function getData2(){
+//     //load the data
+//     fetch("data/MegaCities.geojson")
+//         .then(function(response){
+//             return response.json();
+//         })
+//         .then(function(json){
+//             //call function to create proportional symbols
+//             createPropSymbols(json);
+//         })
+//};
+
+
 //Step 3: Add circle markers for point features to the map
 function createPropSymbols(data){
     //create marker options
