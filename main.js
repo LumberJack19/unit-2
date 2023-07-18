@@ -41,7 +41,7 @@ function onEachFeature(feature, layer) {
 // This function retrieves the data and adds it to the map
 function getData(){
     // Fetching the GeoJSON data from the specified URL
-    fetch("data/cy21allenplane.geojson")
+    fetch("cy21allenplane.geojson")   //data is located in the root of the repo
         .then(function(response){
             // Once the data is fetched, we parse it as JSON
             return response.json();
