@@ -6,8 +6,10 @@
             <title>Leaflet WI Airport Map</title>
 
         <!--put your external stylesheet links here-->
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+        <link rel="stylesheet" href="style.css">  <!--move your own style sheet here to avoid issues with your values not going through-->
+
         <!--[if IE<9]>
             <link rel="stylesheet" href="css/style.ie.css">
         <![endif]-->
@@ -31,7 +33,7 @@
     </div>
    <div class="slidecontainer">
         <p>Default range slider:</p>
-        <input type="range" min="1" max="100" value="50">
+        <input type="range" min="2020" max="2021" value="1">
     </div>
         <!--you can also use this space for internal scripts;
         place these within <script> tags-->
@@ -43,9 +45,9 @@
             <!--<script type="text/javascript" src="js/adaptedTutorial.js"></script>
             replace anytime with main.js-->
             <!--Leaflet JavaScript-->
-            <script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <!--put your external script links here-->
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="main.js"></script>
  <!--<button onclick="myFunction()">Try it</button>
         <script>
         function myFunction() {

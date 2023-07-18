@@ -41,7 +41,7 @@ function onEachFeature(feature, layer) {
 // This function retrieves the data and adds it to the map
 function getData(){
     // Fetching the GeoJSON data from the specified URL
-    fetch("data/cy21allenplane.geojson")
+    fetch("cy21allenplane.geojson")   //data is located in the root of the repo
         .then(function(response){
             // Once the data is fetched, we parse it as JSON
             return response.json();
@@ -68,19 +68,22 @@ function getData(){
         });
 };
 
+//commenting out unused code here 
 
-//Step 2: Import GeoJSON data
-function getData2(){
-    //load the data
-    fetch("data/MegaCities.geojson")
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(json){
-            //call function to create proportional symbols
-            createPropSymbols(json);
-        })
-};
+// //Step 2: Import GeoJSON data
+// function getData2(){
+//     //load the data
+//     fetch("data/MegaCities.geojson")
+//         .then(function(response){
+//             return response.json();
+//         })
+//         .then(function(json){
+//             //call function to create proportional symbols
+//             createPropSymbols(json);
+//         })
+//};
+
+
 //Step 3: Add circle markers for point features to the map
 function createPropSymbols(data){
     //create marker options
